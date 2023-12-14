@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+  }
+
+.motivation-img {
+    border: 5px solid white;
+    display: block;
+    width: 100%;
+    
+}
+.poster {
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    /* center div: width and margin left */
+    margin-top: 100px;
+}
