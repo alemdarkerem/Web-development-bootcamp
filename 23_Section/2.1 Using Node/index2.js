@@ -1,0 +1,1 @@
+console.log("Hello, I am currently testing node in index2.js");
