@@ -6,7 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const port = 3000;
-
+// use body-parser as middleware
 app.use(bodyParser.urlencoded({ extended: true}));
 
 app.post("/submit", (req, res) => {
