@@ -19,8 +19,8 @@ app.get("/new", (req, res) => {
 
 
 app.post("/submit", (req, res) => {
-    const content = req.body['content'];
-    const newPost = {content};
+    const {title, content}  = req.body;
+    const newPost = {title, content};
     posts.push(newPost);
     res.redirect('/');
 })
