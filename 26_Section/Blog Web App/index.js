@@ -3,28 +3,37 @@ import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
-var blogText = "";
+let posts = [];
 
 app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", (req, res) => {
-    res.render('index.ejs');
+    res.render('index.ejs', {posts});
+})
+
+app.get("/new", (req, res) => {
+    res.render('new.ejs');
 })
 
 
 app.post("/submit", (req, res) => {
-     res.render("index.ejs", {
-     blogText: req.body['text'],
-    })
+    const content = req.body['content'];
+    const newPost = {content};
+    posts.push(newPost);
+    res.redirect('/');
 })
 
 app.post("/delete", (req, res) => {
-    res.render("index.ejs", {
-       blogText: "" 
-    })
+    posts.pop();
+    res.redirect('/');
 })
+
+// app.post("/delete", (req, res) => {
+//     posts = [];
+//     res.redirect('/');
+// })
 
 
 

@@ -59,6 +59,29 @@ form {
 }
 
 
+.feedback-input-button {
+  display: flex;
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #3586ff;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  text-align: center;
+  justify-content: center;
+  width: 30%;
+  box-sizing: border-box;
+  outline: 0;
+  margin-left: 35%;
+}
+#button-last {
+  margin-bottom: 100px;
+}
+
 .feedback-input:focus {
   border: 2px solid #3586ff;
 }
@@ -70,7 +93,7 @@ textarea {
 }
 
 [type="submit"] {
-  width: 50%;
+  width: 30%;
   background: #3586ff;
   border-radius: 5px;
   border: 0;
@@ -85,7 +108,7 @@ textarea {
 }
 
 [type="delete"] {
-  width: 50%;
+  width: 30%;
   background: red;
   border-radius: 5px;
   border: 0;
@@ -114,6 +137,7 @@ textarea {
   grid-template-columns: 600px;
   grid-template-rows: repeat(auto-fill, minmax(400, 800));;
   gap: 100px;
+  list-style: none;
 }
 
 .grid-items {
