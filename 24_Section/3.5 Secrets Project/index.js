@@ -6,7 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const port = 3000;
-const password = "kAnarya1907!";
+const password = "P4ssword";
 var userPassword = "";
 
 app.use(bodyParser.urlencoded({ extended: true}));
