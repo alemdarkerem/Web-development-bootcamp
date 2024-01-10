@@ -1,14 +1,16 @@
 <%- include ("partials/header.ejs") %>
+<div class="title-box">
+  <h1>Blog Posts</h1>
+</div>
 
-<h1>Blog Posts</h1>
 <ul class="blog-list">
   <br>
-  <% posts.forEach(post => { %>
+  <% for (let i = posts.length - 1; i >= 0; i--) { %>
     <li>
-      <h2><%= post.title %></h2>
-      <p><%= post.content %></p>
+      <h2><%= posts[i].title %></h2>
+      <p><%= posts[i].content %></p>
     </li>
-  <% }); %>
+  <% } %>
 </ul>
 <button class="feedback-input-button"><a href="/new">Create a New Post</a></button>
 

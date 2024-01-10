@@ -7,10 +7,21 @@ h1 {
   font-weight: 600;
   background-image: linear-gradient(to left, #553c9a, #b393d3);
   color: transparent;
+  display: block;
+  position: relative;
+  width: 100%;
   background-clip: text;
   -webkit-background-clip: text;
 }
 
+.title-box {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -44,7 +55,6 @@ form {
 }
 
 .feedback-input {
-  display: flex;
   color: black;
   font-weight: 500;
   font-size: 18px;
@@ -56,16 +66,13 @@ form {
   padding: 13px;
   margin-bottom: 15px;
   text-align: center;
-  justify-content: center;
-  width: 50%;
+  width: 70%;
   box-sizing: border-box;
   outline: 0;
-  margin-left: 25%;
 }
 
 
 .feedback-input-button {
-  display: flex;
   color: black;
   font-weight: 500;
   font-size: 18px;
@@ -77,11 +84,9 @@ form {
   padding: 13px;
   margin-bottom: 15px;
   text-align: center;
-  justify-content: center;
-  width: 30%;
   box-sizing: border-box;
+  width: 35%;
   outline: 0;
-  margin-left: 35%;
 }
 #button-last {
   margin-bottom: 100px;
@@ -139,9 +144,10 @@ textarea {
   justify-content: center;
   text-align: center;
   display: grid;
-  grid-template-columns: 600px;
+  grid-template-columns: auto-fill;
   grid-template-rows: repeat(auto-fill, minmax(400, 800));;
   gap: 100px;
+  width: 100%;
   list-style: none;
 }
 
@@ -153,4 +159,13 @@ textarea {
 
 .first-grid {
   margin-top: 100px;
+}
+
+@media (max-width:1280px) {
+  .feedback-input-button {
+    width: 50%;
+  }
+  h1 {
+    font-size: 40px;
+  }
 }
