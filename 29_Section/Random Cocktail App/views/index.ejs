@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Random Cocktail App</title>
+  <link rel="stylesheet" href="/styles.css"> <!-- Link to the new CSS file -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+    <div class="response-area">
+      <p><%= content %></p>
+      <h1><%= name %></h1>
+      <h3><%= glass %></h3>
+      <% if (typeof img !== 'undefined' && img) { %>
+        <img src="<%= img %>" alt="<%= name %>">
+      <% } %>
+      <% if (typeof ingredients !== 'undefined' && ingredients.length > 0) { %>
+        <h2>Ingredients</h2>
+        <ul>
+          <% for (let i = 0; i < ingredients.length; i++) { %>
+            <li><%= ingredients[i] %> - <%= measures[i] %></li>
+          <% } %>
+        </ul>
+      <% } %>
+      <p>
+        <%= Instructions %>
+      </p>
+    </div>
+    <form action="/random-cocktail" id="myForm" method="POST">
+      <button type="submit" name="cocktail" class="cool-button">GET RANDOM COCKTAIL</button>
+    </form>
+  </div>
+</body>
+
+</html>
